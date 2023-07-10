@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/stocks_page.css" />
+  <title>Stocks</title>
+  <script src="https://use.fontawesome.com/e7b5815694.js"></script>
+</head>
+
+<body>
+
+  <head>
+    <link href="../css/header_style.css" rel="stylesheet" />
+  </head>
+  <style>
+    .top_bar {
+      min-width: min-content;
+      width: 100vw;
+      height: 15vh;
+      max-height: 95px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-shadow: 2px 3px rgba(4, 4, 4, 0.571);
+      background-color: #fffefc;
+      backdrop-filter: blur(15px);
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      padding-left: 5vw;
+      padding-right: 5vw;
+      z-index: 5;
+      display: flex;
+      justify-content: space-between;
+
+    }
+  </style>
+  <div class="top_bar">
+  <a href="../html/stocks_page.html">
+      <div class="side_logo">
+        <img class="logo_img" src="../images/logo-removebg-preview (1).png" alt="Logo">
+      </div>
+    </a>
+    <div class="right_logo">
+
+      <a href="../html/learn.html"><button class="expense_btn">Learn</button></a>
+      <a href="../html/community.html"><button class="community_btn">News</button></a>
+      <a href="../html/stocks_page.html"><button class="stock_btn">Stocks</button></a>
+      <a href="../html/expense.html"><button class="expense_btn">Expense Track</button></a>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="left_align">Hello,<div id="user_name_topbar"> Dhruv</div>
+    </div>
+    <div class="right_align">Your Funds: &#8377;<div id="user_funds">10000</div>
+    </div>
+  </div>
+
+
+  <div class="float-container">
+    <div class="right_top">
+
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+          async>
+            {
+              "symbols": [
+                {
+                  "description": "",
+                  "proName": "NSE:NIFTY"
+                },
+                {
+                  "description": "",
+                  "proName": "BSE:SENSEX"
+                },
+                {
+                  "description": "",
+                  "proName": "NYSE:DOW"
+                },
+                {
+                  "description": "",
+                  "proName": "NSE:ADANIGREEN"
+                },
+                {
+                  "description": "",
+                  "proName": "NSE:RELIANCE"
+                }
+              ],
+                "showSymbolLogo": true,
+                  "colorTheme": "light",
+                    "isTransparent": true,
+                      "displayMode": "adaptive",
+                        "locale": "in"
+            }
+          </script>
+      </div>
+      <!-- TradingView Widget END -->
+      <div class="flex">
+        <div class="card dark" onclick="window.location.href = '/html/holdings.html';">
+          <div class="blur"></div>
+          <div class="absolute">
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b last">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+          </div>
+          <figure>
+            <svg viewBox="0 0 20 20" aria-hidden="true"
+              class="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-emerald-300/10 dark:group-hover:stroke-emerald-400">
+              <path stroke-width="0" fill-rule="evenodd" clip-rule="evenodd"
+                d="M10 .5a9.5 9.5 0 0 1 5.598 17.177C14.466 15.177 12.383 13.5 10 13.5s-4.466 1.677-5.598 4.177A9.5 9.5 0 0 1 10 .5ZM12.5 8a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z">
+              </path>
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round"
+                d="M10 .5a9.5 9.5 0 0 1 5.598 17.177A9.458 9.458 0 0 1 10 19.5a9.458 9.458 0 0 1-5.598-1.823A9.5 9.5 0 0 1 10 .5Z">
+              </path>
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round"
+                d="M4.402 17.677C5.534 15.177 7.617 13.5 10 13.5s4.466 1.677 5.598 4.177M10 5.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z">
+              </path>
+            </svg>
+          </figure>
+          <h3>Holdings</h3>
+          <p>Check your holdings here.</p>
+
+        </div>
+
+        <div class="card">
+          <div class="blur"></div>
+          <div class="absolute">
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b last">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+          </div>
+          <figure>
+            <svg viewBox="0 0 20 20" aria-hidden="true"
+              class="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-emerald-300/10 dark:group-hover:stroke-emerald-400">
+              <path stroke-width="0" fill-rule="evenodd" clip-rule="evenodd"
+                d="M10 .5a9.5 9.5 0 0 1 5.598 17.177C14.466 15.177 12.383 13.5 10 13.5s-4.466 1.677-5.598 4.177A9.5 9.5 0 0 1 10 .5ZM12.5 8a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z">
+              </path>
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round"
+                d="M10 .5a9.5 9.5 0 0 1 5.598 17.177A9.458 9.458 0 0 1 10 19.5a9.458 9.458 0 0 1-5.598-1.823A9.5 9.5 0 0 1 10 .5Z">
+              </path>
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round"
+                d="M4.402 17.677C5.534 15.177 7.617 13.5 10 13.5s4.466 1.677 5.598 4.177M10 5.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z">
+              </path>
+            </svg>
+          </figure>
+          <h3>Acount Balance</h3>
+          <p>Get your balance history here.</p>
+
+        </div>
+        <div class="card dark">
+          <div class="blur"></div>
+          <div class="absolute">
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+            <div class="flex-b last">
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+              <div class="skew"></div>
+            </div>
+          </div>
+          <figure>
+            <svg viewBox="0 0 20 20" aria-hidden="true"
+              class="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-emerald-300/10 dark:group-hover:stroke-emerald-400">
+              <path stroke-width="0" fill-rule="evenodd" clip-rule="evenodd"
+                d="M10 .5a9.5 9.5 0 0 1 5.598 17.177C14.466 15.177 12.383 13.5 10 13.5s-4.466 1.677-5.598 4.177A9.5 9.5 0 0 1 10 .5ZM12.5 8a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z">
+              </path>
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round"
+                d="M10 .5a9.5 9.5 0 0 1 5.598 17.177A9.458 9.458 0 0 1 10 19.5a9.458 9.458 0 0 1-5.598-1.823A9.5 9.5 0 0 1 10 .5Z">
+              </path>
+              <path fill="none" stroke-linecap="round" stroke-linejoin="round"
+                d="M4.402 17.677C5.534 15.177 7.617 13.5 10 13.5s4.466 1.677 5.598 4.177M10 5.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z">
+              </path>
+            </svg>
+          </figure>
+          <h3>Commodity</h3>
+          <p>Manage your commodities here.</p>
+
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="search-input">
+          <a href="" target="_blank" hidden></a>
+          <input type="text" placeholder="Type to search stock names..">
+          <div class="autocom-box">
+            <!-- here list are inserted from javascript -->
+          </div>
+          <div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+        </div>
+      </div>
+
+      <!-- <script src="js/suggestions.js"></script> -->
+      <!-- <script src="js/script.js"></script> -->
+      <script src="/js/stocks_page.js"></script>
+    </div>
+
+
+    <!-- TradingView Widget BEGIN -->
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/markets/" rel="noopener"
+          target="_blank"><span class="blue-text">World markets</span></a> by TradingView</div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+        async>
+          {
+            "colorTheme": "light",
+              "dateRange": "12M",
+                "showChart": true,
+                  "locale": "in",
+                    "largeChartUrl": "",
+                      "isTransparent": false,
+                        "showSymbolLogo": true,
+                          "showFloatingTooltip": false,
+                            "width": "450",
+                              "height": "660",
+                                "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                                  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                                    "gridLineColor": "rgba(42, 46, 57, 0)",
+                                      "scaleFontColor": "rgba(106, 109, 120, 1)",
+                                        "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                                          "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                                            "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                                              "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                                                "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+                                                  "tabs": [
+                                                    {
+                                                      "title": "Indices",
+                                                      "symbols": [
+                                                        {
+                                                          "s": "FOREXCOM:SPXUSD",
+                                                          "d": "S&P 500"
+                                                        },
+                                                        {
+                                                          "s": "FOREXCOM:NSXUSD",
+                                                          "d": "US 100"
+                                                        },
+                                                        {
+                                                          "s": "FOREXCOM:DJI",
+                                                          "d": "Dow 30"
+                                                        },
+                                                        {
+                                                          "s": "INDEX:NKY",
+                                                          "d": "Nikkei 225"
+                                                        },
+                                                        {
+                                                          "s": "INDEX:DEU40",
+                                                          "d": "DAX Index"
+                                                        },
+                                                        {
+                                                          "s": "FOREXCOM:UKXGBP",
+                                                          "d": "UK 100"
+                                                        }
+                                                      ],
+                                                      "originalTitle": "Indices"
+                                                    },
+                                                    {
+                                                      "title": "Futures",
+                                                      "symbols": [
+                                                        {
+                                                          "s": "CME_MINI:ES1!",
+                                                          "d": "S&P 500"
+                                                        },
+                                                        {
+                                                          "s": "CME:6E1!",
+                                                          "d": "Euro"
+                                                        },
+                                                        {
+                                                          "s": "COMEX:GC1!",
+                                                          "d": "Gold"
+                                                        },
+                                                        {
+                                                          "s": "NYMEX:CL1!",
+                                                          "d": "Crude Oil"
+                                                        },
+                                                        {
+                                                          "s": "NYMEX:NG1!",
+                                                          "d": "Natural Gas"
+                                                        },
+                                                        {
+                                                          "s": "CBOT:ZC1!",
+                                                          "d": "Corn"
+                                                        }
+                                                      ],
+                                                      "originalTitle": "Futures"
+                                                    },
+                                                    {
+                                                      "title": "Bonds",
+                                                      "symbols": [
+                                                        {
+                                                          "s": "CME:GE1!",
+                                                          "d": "Eurodollar"
+                                                        },
+                                                        {
+                                                          "s": "CBOT:ZB1!",
+                                                          "d": "T-Bond"
+                                                        },
+                                                        {
+                                                          "s": "CBOT:UB1!",
+                                                          "d": "Ultra T-Bond"
+                                                        },
+                                                        {
+                                                          "s": "EUREX:FGBL1!",
+                                                          "d": "Euro Bund"
+                                                        },
+                                                        {
+                                                          "s": "EUREX:FBTP1!",
+                                                          "d": "Euro BTP"
+                                                        },
+                                                        {
+                                                          "s": "EUREX:FGBM1!",
+                                                          "d": "Euro BOBL"
+                                                        }
+                                                      ],
+                                                      "originalTitle": "Bonds"
+                                                    },
+                                                    {
+                                                      "title": "Forex",
+                                                      "symbols": [
+                                                        {
+                                                          "s": "FX:EURUSD",
+                                                          "d": "EUR/USD"
+                                                        },
+                                                        {
+                                                          "s": "FX:GBPUSD",
+                                                          "d": "GBP/USD"
+                                                        },
+                                                        {
+                                                          "s": "FX:USDJPY",
+                                                          "d": "USD/JPY"
+                                                        },
+                                                        {
+                                                          "s": "FX:USDCHF",
+                                                          "d": "USD/CHF"
+                                                        },
+                                                        {
+                                                          "s": "FX:AUDUSD",
+                                                          "d": "AUD/USD"
+                                                        },
+                                                        {
+                                                          "s": "FX:USDCAD",
+                                                          "d": "USD/CAD"
+                                                        }
+                                                      ],
+                                                      "originalTitle": "Forex"
+                                                    }
+                                                  ]
+          }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/place_data.js"></script>
+</body>
+
+</html>
